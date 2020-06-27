@@ -1,26 +1,45 @@
-.ityped-cursor {
-    font-size: 2.2rem;
-    opacity: 1;
-    -webkit-animation: blink 0.3s infinite;
-    -moz-animation: blink 0.3s infinite;
-    animation: blink 0.3s infinite;
-    animation-direction: alternate;
-}
-
-@keyframes blink {
-    100% {
-        opacity: 0;
+.grid {
+    overflow: hidden;
+        padding: 0.5em 0 0 0.5em;
+        max-width: 76em;
+        margin: 0 auto;
     }
-}
-
-@-webkit-keyframes blink {
-    100% {
-        opacity: 0;
+    .grid li {
+        padding: 0 0.5em 0.5em 0;
     }
-}
-
-@-moz-keyframes blink {
-    100% {
-        opacity: 0;
+    .grid li > div {
+        background: linear-gradient(75deg, rgb(126, 145, 141) 2%, rgb(139, 213, 191) 93%);
+        padding: 7em 2em;
+        text-align: center;
     }
-}
+    .grid li a {
+        color: #fff;
+    }
+    
+    @media all and (min-width: 27em) {
+        .grid li {
+            width: 50%;
+            float: left;
+        }
+    }
+    
+    @media all and (min-width: 40em) {
+        .grid li {
+            width: 33.3333333%;
+        }
+        .grid li.wide {
+            width: 66.666666%;
+        }
+    }
+    @media all and (min-width: 60em) {
+        .grid li {
+            width: 25%;
+        }
+        .grid li.wide {
+            width: 50%;
+        }
+    }
+
+    .pattern{
+        background: #fff;
+    }
